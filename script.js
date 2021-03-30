@@ -35,3 +35,24 @@ function displayResults(responseJson) {
     $(".results").removeClass("hidden");
   }
 }
+
+"use strict";
+
+function getDogImages(howManyInput) {
+  fetch(`https://dog.ceo/api/breeds/image/random/${howManyInput}`)
+      .then(response => response.json())
+      .then(responseJson => console.log(responseJson));
+}
+
+function watchForm() {
+  $("#chooseHowManyDogs").submit(event => {
+    event.preventDefault();
+    let userInput = $("#howManyDogs").val();
+    getDogImages(userInput);
+  });
+}
+
+$(function() {
+  console.log('App loaded! Waiting for submit!');
+  watchForm();
+});
