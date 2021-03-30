@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Thinkful Simple GET Requests API assignment"
+      content="Simple GET Requests API assignment"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -46,7 +46,16 @@
         </div>
       </form>
     </section>
-
+    
+      <div class="container">
+        <h1>Dog API App #1</h1>
+        <form id="chooseHowManyDogs">
+          <label for="howManyDogs">How many dogs do you want to see?</label>
+          <input id="howManyDogs" type="number" name="numberOfImages" min="1" max="50" value="3" required/>
+          <button type="submit" id="submit-number-btn" tabindex="5">Get dog pics!</button>
+        </form>
+    </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
